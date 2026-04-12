@@ -35,15 +35,15 @@ const HeroSection = () => (
     </div>
 
     {/* Radial glow */}
-    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-silver/5 blur-[120px]" />
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[600px] md:h-[600px] rounded-full bg-silver/5 blur-[120px]" />
 
-    <div className="container mx-auto px-4 relative z-10 text-center pt-20">
+    <div className="container mx-auto px-5 sm:px-6 relative z-10 text-center pt-24 pb-16">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-muted/50 mb-8">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-background/60 backdrop-blur-sm mb-6">
           <Sparkles className="w-4 h-4 text-silver" />
           <span className="text-xs font-medium text-muted-foreground">Agence digitale premium au Sénégal</span>
         </div>
@@ -53,7 +53,7 @@ const HeroSection = () => (
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.15 }}
-        className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6"
+        className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-4 md:mb-6"
       >
         <span className="text-gradient-metallic">Gaïndé</span>{" "}
         <span className="text-foreground">Communication</span>
@@ -63,7 +63,7 @@ const HeroSection = () => (
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.3 }}
-        className="text-silver-blue text-base md:text-lg italic mb-2"
+        className="text-silver-blue text-sm md:text-lg italic mb-3"
       >
         Votre image, Notre marque
       </motion.p>
@@ -72,7 +72,7 @@ const HeroSection = () => (
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.4 }}
-        className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10"
+        className="text-muted-foreground text-base md:text-xl max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed"
       >
         Votre partenaire digital au Sénégal. Nous concevons des stratégies sur-mesure pour générer visibilité, prospects et chiffre d'affaires.
       </motion.p>
@@ -81,18 +81,18 @@ const HeroSection = () => (
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.5 }}
-        className="flex flex-col sm:flex-row gap-4 justify-center"
+        className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-2 sm:px-0"
       >
         <Link
           to="/contact"
-          className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-accent text-accent-foreground font-semibold text-base hover:bg-silver-light transition-all duration-300 hover:shadow-lg hover:shadow-silver/10"
+          className="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-accent text-accent-foreground font-bold text-sm sm:text-base shadow-lg shadow-silver/10 hover:shadow-xl hover:shadow-silver/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
         >
           Demandez votre audit gratuit
-          <ArrowRight className="w-4 h-4" />
+          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
         </Link>
         <Link
           to="/services"
-          className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg border border-border text-foreground font-medium text-base hover:bg-muted transition-all duration-300"
+          className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl border-2 border-silver/30 text-foreground font-semibold text-sm sm:text-base hover:border-silver/60 hover:bg-silver/5 active:scale-[0.98] transition-all duration-300 backdrop-blur-sm"
         >
           Découvrir nos services
         </Link>

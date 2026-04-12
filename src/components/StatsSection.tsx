@@ -9,23 +9,23 @@ const stats = [
 ];
 
 const StatsSection = () => (
-  <section className="py-20 md:py-28 bg-background">
-    <div className="container mx-auto px-4">
+  <section className="py-16 md:py-24 bg-background">
+    <div className="container mx-auto px-5 sm:px-6">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-16"
+        className="text-center mb-10 md:mb-14"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3">
           Le marché digital au Sénégal <span className="text-gradient-metallic">2025</span>
         </h2>
-        <p className="text-muted-foreground max-w-xl mx-auto">
+        <p className="text-muted-foreground text-sm md:text-base max-w-xl mx-auto">
           Comprendre le paysage digital sénégalais est essentiel pour toute stratégie efficace.
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
         {stats.map((s, i) => (
           <motion.div
             key={s.label}
@@ -33,15 +33,15 @@ const StatsSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className="bg-gradient-card rounded-xl p-6 md:p-8 border border-border text-center glow-silver hover:border-silver/30 transition-all duration-500"
+            className="bg-gradient-card rounded-xl p-5 md:p-8 border border-border text-center glow-silver hover:border-silver/30 transition-all duration-500"
           >
-            <s.icon className="w-8 h-8 text-silver mx-auto mb-4" />
-            <div className="text-3xl md:text-4xl font-extrabold text-gradient-metallic mb-2">{s.value}</div>
-            <div className="text-sm text-muted-foreground">{s.label}</div>
+            <s.icon className="w-6 h-6 md:w-8 md:h-8 text-silver mx-auto mb-3" />
+            <div className="text-2xl md:text-4xl font-extrabold text-gradient-metallic mb-1">{s.value}</div>
+            <div className="text-xs md:text-sm text-muted-foreground leading-tight">{s.label}</div>
           </motion.div>
         ))}
       </div>
-      <p className="text-xs text-muted-foreground text-center mt-6">Source: DataReportal 2025</p>
+      <p className="text-xs text-muted-foreground text-center mt-5">Source: DataReportal 2025</p>
     </div>
   </section>
 );
