@@ -1,12 +1,19 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { Suspense } from "react";
+import LionHead3D from "./LionHead3D";
 
 const HeroSection = () => (
   <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-dark">
-    {/* Animated particles background */}
-    <div className="absolute inset-0">
-      {Array.from({ length: 30 }).map((_, i) => (
+    {/* 3D Lion Head + Mouse Particles */}
+    <Suspense fallback={null}>
+      <LionHead3D />
+    </Suspense>
+
+    {/* Subtle CSS particles overlay */}
+    <div className="absolute inset-0 z-[1] pointer-events-none">
+      {Array.from({ length: 15 }).map((_, i) => (
         <motion.div
           key={i}
           className="absolute w-1 h-1 rounded-full bg-silver/30"
