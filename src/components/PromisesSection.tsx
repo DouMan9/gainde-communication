@@ -8,20 +8,20 @@ const promises = [
 ];
 
 const PromisesSection = () => (
-  <section className="py-20 md:py-28 bg-background">
-    <div className="container mx-auto px-4">
+  <section className="py-16 md:py-24 bg-background">
+    <div className="container mx-auto px-5 sm:px-6">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-16"
+        className="text-center mb-10 md:mb-14"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3">
           La promesse <span className="text-gradient-metallic">Gaïndé</span>
         </h2>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
         {promises.map((p, i) => (
           <motion.div
             key={p.title}
@@ -29,12 +29,12 @@ const PromisesSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.15 }}
-            className="text-center"
+            className="text-center px-2"
           >
-            <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center mx-auto mb-6 border border-border">
-              <p.icon className="w-7 h-7 text-silver" />
+            <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-muted flex items-center justify-center mx-auto mb-5 border border-border">
+              <p.icon className="w-6 h-6 md:w-7 md:h-7 text-silver" />
             </div>
-            <h3 className="text-xl font-bold text-foreground mb-3">{p.title}</h3>
+            <h3 className="text-lg md:text-xl font-bold text-foreground mb-2">{p.title}</h3>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-sm mx-auto">{p.desc}</p>
           </motion.div>
         ))}
