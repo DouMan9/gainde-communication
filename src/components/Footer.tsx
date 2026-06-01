@@ -6,7 +6,7 @@ const Footer = () => (
     <div className="container mx-auto px-5 sm:px-6">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10 mb-8">
         <div className="md:col-span-2">
-          <img src={logo} alt="Gaïndé Communication" className="h-12 md:h-14 w-auto mb-3" />
+          <img src={logo} alt="Gaïndé Communication" className="h-14 md:h-[72px] w-auto mb-3" />
           <p className="text-muted-foreground text-sm max-w-md leading-relaxed">
             Votre partenaire digital au Sénégal. Nous concevons des stratégies sur-mesure pour propulser votre entreprise.
           </p>
