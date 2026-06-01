@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Globe, Share2, Rocket, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PricingCard from "@/components/PricingCard";
@@ -42,6 +43,12 @@ const SectionTitle = ({ icon: Icon, title, subtitle }: { icon: React.ElementType
 
 const Services = () => (
   <>
+    <SEO
+      title="Nos services - Création web, Social Media, SEO, Meta Ads"
+      description="Découvrez nos services digitaux au Sénégal : création de sites web vitrine et e-commerce, gestion des réseaux sociaux, publicité Meta Ads, SEO et email marketing."
+      keywords="création site web Sénégal, e-commerce Dakar, gestion réseaux sociaux, community management Sénégal, Meta Ads, publicité Facebook Instagram, SEO référencement, email marketing"
+      pathname="/services"
+    />
     <Navbar />
     <main className="pt-20 md:pt-24">
       {/* Hero */}
