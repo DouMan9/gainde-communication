@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Shield, Crown, Eye, ThumbsUp, Gem, Target, Users, Zap } from "lucide-react";
+import SEO from "@/components/SEO";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -19,6 +20,12 @@ const strengths = [
 
 const About = () => (
   <>
+    <SEO
+      title="À propos - Gaïndé Communication, agence digitale au Sénégal"
+      description="Découvrez Gaïndé Communication, l'agence de marketing digital basée à Dakar, Sénégal. Expertise locale en création web, social media, SEO et publicité en ligne."
+      keywords="agence marketing digital Sénégal, agence communication Dakar, création site web Sénégal, digital marketing Dakar, transformation digitale Sénégal"
+      pathname="/a-propos"
+    />
     <Navbar />
     <main className="pt-20 md:pt-24">
       {/* Hero About */}

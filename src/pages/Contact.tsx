@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Phone, Mail, MessageCircle, Globe, Send, Sparkles } from "lucide-react";
+import SEO from "@/components/SEO";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useToast } from "@/hooks/use-toast";
@@ -24,6 +25,12 @@ const Contact = () => {
 
   return (
     <>
+      <SEO
+        title="Contact - Demandez votre audit digital gratuit"
+        description="Contactez Gaïndé Communication à Dakar pour un audit gratuit de votre présence digitale. Téléphone, WhatsApp et formulaire de contact. Réponse sous 24h."
+        keywords="contact agence digitale Dakar, audit digital gratuit Sénégal, agence web Dakar contact, marketing digital Sénégal contact, devis site web Sénégal"
+        pathname="/contact"
+      />
       <Navbar />
       <main className="pt-20 md:pt-24">
         {/* Hero */}
